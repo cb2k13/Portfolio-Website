@@ -83,3 +83,81 @@
   }
 
   
+
+
+
+/* ====== MOBILE HERO FIX (force overrides) ====== */
+@media (max-width: 768px) {
+  /* Let the text flow normally and be centered */
+  .home-page .text-zone {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-height: none !important;
+    margin: 24px auto 0 !important;
+    padding: 0 16px !important;
+    text-align: center !important;
+  }
+
+  /* Make the H1 a flexible row of glyphs that wraps cleanly */
+  .home-page h1 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: baseline !important;
+    gap: 0 .25ch !important;         /* tiny horizontal gap between glyphs/words */
+    white-space: normal !important;   /* allow wrapping */
+    overflow-wrap: anywhere !important;
+    font-size: clamp(28px, 8vw, 40px) !important;
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+  }
+
+  /* AnimatedLetters spans: behave like normal inline blocks */
+  .home-page h1 > span,
+  .home-page h1 .text-animate,
+  .home-page h1 .text-animate-hover,
+  .home-page h1 span[class*="_"] {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: baseline !important;
+    transform: none !important;       /* stop weird baselines from transforms */
+  }
+
+  /* Remove forced line break on mobile so wrapping is natural */
+  .home-page h1 br { display: none !important; }
+
+  /* Logo glyph sits on baseline and scales down a bit */
+  .home-page h1 img {
+    width: clamp(20px, 6vw, 28px) !important;
+    height: auto !important;
+    vertical-align: -4px !important;
+    margin: 0 6px !important;
+    transform: none !important;
+  }
+
+  .home-page h2 {
+    font-size: clamp(12px, 3.2vw, 14px) !important;
+    letter-spacing: 2px !important;
+    margin-top: 12px !important;
+    text-align: center !important;
+  }
+
+  .home-page .flat-button {
+    float: none !important;
+    display: inline-block !important;
+    margin: 16px auto 0 !important;
+  }
+}
+
+/* On very small phones, disable the entrance animation to avoid jitter */
+@media (max-width: 420px) {
+  .home-page .text-animate,
+  .home-page .text-animate-hover,
+  .home-page h1 span[class*="_"] {
+    animation: none !important;
+  }
+}
