@@ -40,3 +40,20 @@ input, textarea {
   animation-fill-mode: forwards; 
 
 }
+
+
+.page,
+.container,
+main {
+  margin-left: 60px;
+}
+
+/* Mobile/Tablet: remove left margin and add top padding for the fixed top bar */
+@media (max-width: 768px) {
+  .page,
+  .container,
+  main {
+    margin-left: 0;
+    padding-top: 64px; /* 56px bar height + breathing room */
+  }
+}

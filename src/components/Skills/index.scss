@@ -31,3 +31,33 @@
     }
   }
   
+
+ 
+  @media (max-width: 768px) {
+    .container.skills-page .skills-icons {
+      position: static !important;
+      transform: none !important;
+  
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+  
+      gap: 12px !important;
+      font-size: 2rem !important;     /* shrink icons on small screens */
+      max-width: 92vw !important;      /* stay inside viewport */
+      margin: 16px auto 0 !important;
+      padding: 0 4px !important;
+    }
+  
+    /* even smaller phones */
+    @media (max-width: 380px) {
+      .container.skills-page .skills-icons {
+        font-size: 1.6rem !important;
+        gap: 10px !important;
+      }
+    }
+  }
+
+
+
