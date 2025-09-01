@@ -1,0 +1,33 @@
+.linkedin {
+    color: #0a66c2; 
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #004182; 
+  }
+}
+
+.skills-icons {
+    position: absolute;      
+    right: 50px;             /* distance from the right edge */
+    top: 50%;                /* halfway down the page */
+    transform: translateY(-50%); /* shift up for perfect vertical centering */
+  
+    display: flex;
+    flex-direction: row;     /* ⬅️ keep them horizontal */
+    gap: 30px;
+    font-size: 5rem;
+  
+    svg {
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+  
+    svg:hover {
+      transform: scale(1.2);
+      color: #ffd700;
+    }
+  }
+  
