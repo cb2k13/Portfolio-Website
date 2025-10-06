@@ -3,7 +3,7 @@ import { useState } from 'react'
 import LogoC from '../../assets/images/logo-C.png'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser, faComputer } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faHome, faUser, faComputer, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
@@ -42,9 +42,8 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink exct="true" activeclassname="active" className="projects-link" to="/projects">
-          <FontAwesomeIcon icon={faDiagram-Project} color="4d4d43" />
+          <FontAwesomeIcon icon={faBars} color="4d4d43" />
         </NavLink>
-
       </nav>
 
       <ul>
